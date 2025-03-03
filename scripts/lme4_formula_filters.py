@@ -1,4 +1,6 @@
-# Miscellaneous functions to filter out models based on their R formulas.
+# Miscellaneous functions to filter out models based on their lme4 R formulas
+import re
+import psyregex
 
 # Tested and working
 def split_sides(formula):
@@ -49,6 +51,7 @@ def split_response(response):
 
 
 # Tested and working
+# Find the random effects in an R lmer4 styled mixed effect formula
 def which_ranef(formula):
     '''Find the random effects in an R formula.'''
     pattern = psyregex.find_ranef
@@ -112,3 +115,4 @@ class RlmsFilter:
         unique_levels = df[grouping_var].nunique()
     
     def build_accepted_formulas_list(self, formulas):
+        pass
