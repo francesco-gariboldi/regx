@@ -22,7 +22,7 @@ def split_sides(formula):
     except Exception as e:
         return f"Error: {e}"
 
-
+# Non-tested
 def split_predictors(predictors):
     '''Split the predictors of a formula into a list of individual predictors.'''
     try:
@@ -35,7 +35,7 @@ def split_predictors(predictors):
     except Exception as e:
         return f"Error: {e}"
 
-
+# non-tested
 def split_response(response):
     '''Split the response variables of a formula into a list of individual
     response variables.'''
